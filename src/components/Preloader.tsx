@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +31,7 @@ export default function Preloader() {
   const text = "KnockmyStay";
   const letters = Array.from(text);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
@@ -43,7 +43,7 @@ export default function Preloader() {
     }
   };
 
-  const letterVariants = {
+  const letterVariants: Variants = {
     hidden: { opacity: 0, y: 10, filter: "blur(4px)" },
     visible: { 
       opacity: 1, 
