@@ -19,7 +19,7 @@ export default function FloatingSearchBar() {
       setIsVisible(window.scrollY > threshold);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     // Initial check
     handleScroll();
     
